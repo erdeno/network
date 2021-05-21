@@ -1,4 +1,5 @@
-# Network: This project is the fourth project of CS50’s Web Programming with Python and JavaScript
+# Network: 
+### This project is the fourth project of CS50’s Web Programming with Python and JavaScript
 ## Specification
 
 - __New Post__: Users who are signed in should be able to write a new text-based post by filling in text into a text area and then clicking a button to submit the post.
