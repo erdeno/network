@@ -1,0 +1,89 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+  <br>
+
+  <div class="container">
+    <div id="new-post" class="mb-4">
+      <h3 id="new-post-header">Create New Post</h3>
+        <form id="compose-form">
+            <textarea class="form-control" id="compose-body" placeholder="Body" rows="4"></textarea>
+            <input type="submit" class="my-2 btn btn-primary" id="send-mail" value='Send'/>
+            <div id="save-later" class="mb-2"></div>
+        </form>
+    </div>
+
+    <div id="profile-view">
+          <div class="row profile">
+            <div class="col-lg-3 col-sm-12">
+              <div class="profile-sidebar">
+                <!-- Profile details here -->
+                <div class="profile-userpic">
+                  <img id="profile-img" src='' class="img-responsive" alt="">
+                </div>
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                  <div class="profile-usertitle-name"></div>
+                  <div class="profile-quote">
+                    "Some quote here..."
+                  </div>
+                </div>
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR BUTTONS -->
+                <div class="profile-userbuttons">
+                  <!-- <button type="button" class="btn btn-success btn-sm">Follow</button>
+                  <button type="button" class="btn btn-danger btn-sm">Unfollow</button> -->
+                </div>
+                <!-- END SIDEBAR BUTTONS -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                  <!-- <ul class="nav d-block">
+                    <li class="profile-nav-link active" id="tweets-profile">
+                      <a href="#" onclick=loadProfile()>Tweets</a>
+                    </li>
+                    <li class="profile-nav-link" id="liked-profile">
+                      <a href="#" onclick=loadProfile()>Liked Tweets</a>
+                    </li>
+                  </ul> -->
+                </div>
+              </div>
+              <br>
+            </div>
+            <div class="col-lg-9 col-sm-12">
+              <div class="profile-tweet-content">
+                <!-- Tweet or following people or liked tweets here -->
+              </div>
+            </div>
+          </div>
+
+    </div>
+    <div id="alert"></div>
+
+    <div id="tweet-detail"></div>
+    <div id="tweets-view"></div>
+
+
+
+    <nav id="pagination" aria-label="Page navigation example">
+      <ul class="pagination justify-content-end">
+        <li id="previous-page" class="page-item disabled"><a class="page-link" onclick=changePage(false) href="#"><span aria-hidden="true">&laquo;</span></a></li>
+        <li class="page-item disabled"><a id="current-page" class="page-link" href="#">1</a></li>
+        <li id="next-page" class="page-item"><a class="page-link" onclick=changePage() href="#"><span aria-hidden="true">&raquo;</span></a></li>
+      </ul>
+    </nav>
+
+
+  </div>
+
+
+
+
+{% endblock %}
+
+
+{% block script %}
+    <script src="{% static 'network/index.js' %}"></script>
+{% endblock %}
